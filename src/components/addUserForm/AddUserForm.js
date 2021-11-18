@@ -12,9 +12,9 @@ const AddUserForm = () => {
   } = useForm();
 
   const onHandleSubmit = async (data) => {
-    const result = await addNewUser(data);
+    await addNewUser(data);
 
-    reset(result);
+    reset();
   };
 
   return (
