@@ -7,11 +7,14 @@ const AddUserForm = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
 
-  const onHandleSubmit = (data) => {
-    addNewUser(data);
+  const onHandleSubmit = async (data) => {
+    await addNewUser(data);
+
+    reset();
   };
 
   return (
